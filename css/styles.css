@@ -18,7 +18,7 @@ h1 {
   margin: 0.5rem;
   padding: 0 0.75rem;
   font-family: "Lobster Two", cursive;
-  font-size: clamp(2.2rem, 10vw, 3.5rem);
+  font-size: clamp(2.2em, 10vw, 3.5em);
   text-align: center;
   color: var(--dark-brown);
 }
@@ -32,11 +32,13 @@ h1 strong {
 p {
   display: block;
   margin: 0.5rem 0;
-  padding: 0 1rem;
+  padding-left: clamp(1rem, 8vw, 3rem);
+  padding-right: clamp(1rem, 8vw, 3rem);
   max-width: 36rem;
   font-family: "Roboto", sans-serif;
   font-size: 1.25em;
   font-weight: 400;
+  word-break: break-all;
   color: var(--dark-brown);
 }
 
@@ -61,15 +63,11 @@ img.logo {
 }
 
 .spacer {
-  aspect-ratio: 960/80;
   width: 100%;
+  min-height: 80px;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center center;
   background-size: cover;
-
-  @supports not (aspect-ratio: auto) {
-    min-height: 80px;
-  }
 }
 
 .yellow {
